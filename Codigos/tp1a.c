@@ -1,5 +1,5 @@
 #define _GNU_SOURCE
-#include "viewline.h"
+#include "filetools.h"
 #include <getopt.h>
 #include <stdlib.h>
 
