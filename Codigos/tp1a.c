@@ -1,7 +1,7 @@
 #define _GNU_SOURCE
 #include "viewline.h"
 #include <getopt.h>
-#include <stdlib.h>0
+#include <stdlib.h>
 
 
 void welcome(){
