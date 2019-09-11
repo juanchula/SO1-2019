@@ -32,6 +32,7 @@ void loadaverage(){
 }
 
 void pc(int a, int b){
+    printf("-----------------------Punto C-----------------------\n");
     int i = 1;
     int t = b/a;
     numberreq();
@@ -45,6 +46,7 @@ void pc(int a, int b){
         loadaverage();
         i++;
     }
+    printf("\n");
 }
 
 

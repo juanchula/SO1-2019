@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+
 int main(int argc, char **argv){
     const struct option long_options [] = {
     { "puntob", 0, NULL,'s'},
@@ -16,23 +17,30 @@ int main(int argc, char **argv){
 
     int c = 0;
     int option_index = 0;
-    unsigned int *a=&(unsigned int){0}, *b=&(unsigned int){0}, *pid=&(unsigned int){0};
-    //pa();
+    //unsigned int *a=&(unsigned int){0}, *b=&(unsigned int){0}, *pid=&(unsigned int){0};
+    int a, b;
+    pa();
     //pb();
     //pc(1, 2);
-    //pd("10199");
+   // pd("3919");
     while (c!=-1){
-        c = getopt_long(argc, argv, "slp", long_options, &option_index);
+        c = getopt_long(argc, argv, "sl:p:", long_options, &option_index);
 
         switch(c){
             case 's':
+            //pa();
+            pb();
             break;
             case 'l':
-            sscanf(argv[2], "%u", a);
-			sscanf(argv[3], "%u", b);
-			pc(*a, *b);
+            //pa();
+            pb();
+			a = atoi(optarg);
+            b = atoi(argv[optind++]);
+            pc(a, b);
             break;
             case 'p':
+            welcome();
+            pd(optarg);
             break;
         }
     }

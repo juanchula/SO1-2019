@@ -67,8 +67,10 @@ void contextc(){
         if(tot[i] != ' ' && space){
             time[j] = tot[i];
             j++;
-            if(time[i] == '\0')
+            if(time[i] == '\0'){
+                cond = 0;
                 break;
+            }
         }
         i++;
     }
@@ -91,17 +93,21 @@ void processes(){
         if(tot[i] != ' ' && space){
             proc[j] = tot[i];
             j++;
-            if(proc[i] == '\0')
+            if(proc[i] == '\0'){
+                cond = 0;
                 break;
+            }
         }
         i++;
     }
     printf("número de procesos creados desde el inicio del sistema %s \n", proc);
 }
 void pb(){
+    printf("-----------------------Punto B-----------------------\n");
     timeCpu();
     contextc();
     processes();
+    printf("\n");
 }
 
 //TODO: para probar solo

@@ -7,6 +7,7 @@
 
 
 void welcome(){
+    printf("-----------------------Welcome-----------------------\n");
     printf( "nombre de maquina: ");
 	puts(viewline("/proc/sys/kernel/hostname", 1));
 	puts(viewline("/proc/driver/rtc", 1));
@@ -60,8 +61,10 @@ void numKernel(){
 
 void pa(){
     welcome();
+    printf("-----------------------Punto A-----------------------\n");
     printCpuInfo();
     kernelVersion();
     uptime();
     numKernel();
+    printf("\n");
 }

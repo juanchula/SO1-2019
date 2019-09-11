@@ -31,17 +31,43 @@ void kernelstacktrace(char *pid){
     char command[200] = "sudo cat ";
     url = detecurl(pid, "stack");
     strcat(command, url);
-    system(command);
+    //system(command);
+    FILE *data = popen(command, "r");
+    char arg [200];
+    while(fgets(arg, 200, data)){
+        printf("%s", arg);
+    }
     // archivo = popen(command, "r");
     // bytes_read = fread(finalt, -1, 200, archivo);
     // FILE command;
 }
 
+void filedescriptor( char *pid){
+    int cond = 0;
+    char permision[50], typefile[50], namefile[50], direcctionfile[50];
+    char *url;
+    char command[200] = "ls -l ";
+    url = detecurl(pid, "fd");
+    strcat(command, url);
+    //system(command);
+    FILE *data = popen(command, "r");
+    char arg [200];
+    while(fgets(arg, 200, data)){
+        if(cond){
+            sscanf(arg, "%s %s %*s %*s %*s %*s %*s %*s %s %*s %s", permision, typefile, namefile, direcctionfile);
+            printf("%s %s %s -> %s\n", permision, typefile, namefile, direcctionfile);
+        }
+        cond++;
+    }
+}
 void pd(char *pid){
+    printf("-----------------------Punto D-----------------------\n");
     limits(pid);
     // hoa = detecurl(pid, "fd\0");
     // puts(hoa);
     kernelstacktrace(pid);
+    filedescriptor(pid);
+    printf("\n");
 }
 
 //TODO: para probar solo
