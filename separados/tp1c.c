@@ -1,8 +1,8 @@
-#define _GNU_SOURCE
+#include "filetools.h"
+#include "tp1c.h"
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdio.h>
-#include "filetools.h"
 
 void numberreq(){
     char r[50], w[50];
@@ -30,7 +30,8 @@ void loadaverage(){
     sscanf(line, "%s", time);
     printf("promedio de carga en el último minuto: %s \n", time);
 }
-void partc(int a, int b){
+
+void pc(int a, int b){
     int i = 1;
     int t = b/a;
     numberreq();
@@ -45,10 +46,13 @@ void partc(int a, int b){
         i++;
     }
 }
-int main(int argc, char **argv){
-    // numberreq();
-    // amountmemori();
-    //loadaverage();
-    partc(2,10);
-    return 0;
-}
+
+
+//TODO: para probar solo
+// int main(int argc, char **argv){
+//     numberreq();
+//     amountmemori();
+//     loadaverage();
+//     pc(2,10);
+//     return 0;
+// }

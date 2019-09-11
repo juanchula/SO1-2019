@@ -1,4 +1,5 @@
 #include "filetools.h"
+#include "tp1b.h"
 #include <getopt.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -97,10 +98,16 @@ void processes(){
     }
     printf("número de procesos creados desde el inicio del sistema %s \n", proc);
 }
-
-int main(int argc, char **argv){
+void pb(){
     timeCpu();
     contextc();
     processes();
-    return 0;
 }
+
+//TODO: para probar solo
+// int main(int argc, char **argv){
+//     timeCpu();
+//     contextc();
+//     processes();
+//     return 0;
+// }

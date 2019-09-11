@@ -1,5 +1,5 @@
-#define _GNU_SOURCE
 #include "filetools.h"
+#include "tp1a.h"
 #include <getopt.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -58,11 +58,10 @@ void numKernel(){
     printf("cantidad de sistemas de archivos soportados por el kernel: %i \n", num);
 }
 
-int main(int argc, char **argv){
+void pa(){
     welcome();
     printCpuInfo();
     kernelVersion();
     uptime();
     numKernel();
-    return 0;
 }
