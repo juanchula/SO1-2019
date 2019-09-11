@@ -19,7 +19,8 @@ void limits(char *pid){
     url = detecurl(pid, "limits");
     line = (searchline(url, "Max open files"));
     sscanf(line, "%*s %*s %*s %s %s", line1, line2);
-    puts(line1);
+    printf("SoftLimit: %s, HardLimit: %s \n", line1, line2);
+    // puts(line1);
 }
 
 void kernelstacktrace(char *pid){
