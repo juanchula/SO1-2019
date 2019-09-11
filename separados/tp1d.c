@@ -23,9 +23,10 @@ void limits(char *pid){
 }
 
 void kernelstacktrace(char *pid){
-    char *url, finalt[200];
-    FILE *archivo;
-    size_t bytes_read;
+    char *url;
+    // char finalt[200];
+    // FILE *archivo;
+    // size_t bytes_read;
 
     char command[200] = "sudo cat ";
     url = detecurl(pid, "stack");

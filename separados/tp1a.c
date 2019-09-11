@@ -35,7 +35,7 @@ void uptime(){
         }
         i++;
     }
-    char *end;
+    //char *end;
     int t = atoi(time);
     //double t = strtod(time, &end);
     int dd= t/86400;
