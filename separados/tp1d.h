@@ -1,5 +1,5 @@
-#ifndef _TP1C_H_
-#define _TP1C_H_
+#ifndef _TP1D_H_
+#define _TP1D_H_
 
 char* detecurl(char *pid, char *last);
 void limits(char *pid);
