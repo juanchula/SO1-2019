@@ -53,6 +53,7 @@ char* searchline(char* file, char* word){
         if(sfinal != NULL)
             break;
     }
+    fclose(fileopen);
     char *finalt = linebreak(sfinal);
     return finalt;
 }

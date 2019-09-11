@@ -47,11 +47,12 @@ void uptime(){
 
 void numKernel(){
     FILE *filesystems = fopen("/proc/filesystems", "rb");
-    char arg[100];
+    char arg[200];
     int num = 0;
-    while(fgets(arg,200, filesystems)){
+    while(fgets(arg, 200, filesystems)){
         num++;
     }
+    fclose(filesystems);
     printf("cantidad de sistemas de archivos soportados por el kernel: %i \n", num);
 }
 

@@ -21,11 +21,26 @@
         puts(line1);
     }
 
+    void kernelstacktrace(char *pid){
+        char *url, finalt[200];
+        FILE *archivo;
+        size_t bytes_read;
+
+        char command[200] = "sudo cat ";
+        url = detecurl(pid, "stack");
+        strcat(command, url);
+        system(command);
+        // archivo = popen(command, "r");
+        // bytes_read = fread(finalt, -1, 200, archivo);
+        // FILE command;
+    }
+
     int main(){
-        limits("6038");
+        limits("3014");
         char *hoa;
-        hoa = detecurl("6038", "fd\0");
+        hoa = detecurl("3014", "fd\0");
         puts(hoa);
+        kernelstacktrace("3014");
         //printf("%s", hoa);
         return 0;
     }
