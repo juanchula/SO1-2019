@@ -1,7 +1,7 @@
 #Macros
 CC=gcc
 CFLAGS=-Wall -pedantic
-FLOUT=main
+FLOUT=rdproc
 FL=main.c
 FLS=filetools.c tp1a.c tp1b.c tp1c.c tp1d.c
 RM=rm

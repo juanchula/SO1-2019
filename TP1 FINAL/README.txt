@@ -2,12 +2,12 @@
 2. Ingresar al directorio donde fue descomprimido y abrir una terminal en el mismo.
 3. En la terminal ejecutar el comando "make".
 4. En la terminal ejecutar el comando requerido para ejecutar el programa:
-    Step A  -> "./main".
-    Step B  -> "./main -s".
-    Step C  -> "./main -l <a> <b>".
-    Step D1 -> "./main -p <pid>".
-    Step D2 -> "./main -f <pid>".
-    Step D3 -> "./main -t <pid>".
+    Step A  -> "./rdproc".
+    Step B  -> "./rdproc -s".
+    Step C  -> "./rdproc -l <a> <b>".
+    Step D1 -> "./rdproc -p <pid>".
+    Step D2 -> "./rdproc -f <pid>".
+    Step D3 -> "./rdproc -t <pid>".
     
     Referencias:
             -<a>   : muestra en intervalos de tiempo a.
@@ -16,3 +16,6 @@
             -D1    -> FileDescriptors.
             -D2    -> Limits.
             -D3    -> KernelStackTrace.
+
+Observaciones: -Todos los comandos presentados en este txt estan encerrados en comillas pero estas no deben ser ingresadas en la terminal.
+             -En donde haya <x> se debera reemplazar por una variable.
