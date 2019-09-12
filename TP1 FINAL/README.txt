@@ -17,5 +17,5 @@
             -D2    -> Limits.
             -D3    -> KernelStackTrace.
 
-Observaciones: -Todos los comandos presentados en este txt estan encerrados en comillas pero estas no deben ser ingresadas en la terminal.
-             -En donde haya <x> se debera reemplazar por una variable.
+Observaciones: -Todos los comandos presentados en este txt están encerrados en comillas pero estas no deben ser ingresadas en la terminal.
+               -En donde haya <x> se deberá reemplazar por una variable.
