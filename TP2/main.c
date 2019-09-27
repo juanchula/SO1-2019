@@ -7,12 +7,14 @@ int PrintPrompt(){
 
 	 uid_t id = geteuid();
 	 struct passwd *pwd = getpwuid(id);
-	 puts (pwd->pw_name);
 
-	FILE *machineName = fopen ("/proc/sys/kernel/hostname", "rb");
-	char arg[200];
-	fgets(arg, 200, machineName);
-	fclose(machineName);
+
+	 FILE *machineName = fopen ("/proc/sys/kernel/hostname", "rb");
+	 char arg[200];
+	 fgets(arg, 200, machineName);
+	 fclose(machineName);
+
+	 printf("%s@%s\n",pwd->pw_name,arg);
 
 	return 0;
 
