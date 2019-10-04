@@ -2,10 +2,17 @@
 #include <stdio.h>
 #include <pwd.h>
 #include <unistd.h>
+#include <string.h>
 
+// void cd{
+
+// }
 int PrintPrompt(){
 	 uid_t id = geteuid();
 	 struct passwd *pwd = getpwuid(id);
+	 char* direc = pwd->pw_dir;
+	 pwd->pw_dir = strcat(direc, "/git");
+	 puts(pwd->pw_dir);
 
 	 FILE *machineName = fopen ("/proc/sys/kernel/hostname", "rb");
 	 char arg[200];
@@ -17,8 +24,11 @@ int PrintPrompt(){
 
 	return 0;
 }
-
-int main(int argc, char **argv)
-{
+// void directory(char *url){
+//     if(-d url){
+        
+//     }
+// }
+int main(int argc, char **argv){
 	PrintPrompt();
 }
