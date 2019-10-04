@@ -4,10 +4,8 @@
 #include <unistd.h>
 
 int PrintPrompt(){
-
 	 uid_t id = geteuid();
 	 struct passwd *pwd = getpwuid(id);
-
 
 	 FILE *machineName = fopen ("/proc/sys/kernel/hostname", "rb");
 	 char arg[200];
@@ -15,11 +13,12 @@ int PrintPrompt(){
 	 fclose(machineName);
 
 	 printf("%s@%s\n",pwd->pw_name,arg);
+	 
 
 	return 0;
-
 }
 
-int main(int argc, char **argv){
+int main(int argc, char **argv)
+{
 	PrintPrompt();
 }
