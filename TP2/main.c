@@ -12,14 +12,14 @@ int PrintPrompt(){
 	 struct passwd *pwd = getpwuid(id);
 	 char* direc = pwd->pw_dir;
 	 pwd->pw_dir = strcat(direc, "/git");
-	 puts(pwd->pw_dir);
+	 //puts(pwd->pw_dir);
 
 	 FILE *machineName = fopen ("/proc/sys/kernel/hostname", "rb");
 	 char arg[200];
 	 fgets(arg, 200, machineName);
 	 fclose(machineName);
-
-	 printf("%s@%s\n",pwd->pw_name,arg);
+	//TODO: Quitar \n de arg
+	 printf("%s@%s:~%s\n",pwd->pw_name,arg,pwd->pw_dir);
 	 
 
 	return 0;
@@ -30,5 +30,16 @@ int PrintPrompt(){
 //     }
 // }
 int main(int argc, char **argv){
+	char entrada[200];
+	char exitt[200] = "exit";
+	puts(exitt);
+	int i = 0;
+	while(strcmp(entrada, exitt)){
+		PrintPrompt();
+		scanf("%s", entrada);
+		
+		printf("%s", entrada);
+		i++;
+	}
 	PrintPrompt();
 }
